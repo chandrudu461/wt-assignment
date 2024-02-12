@@ -1,0 +1,16 @@
+<h2 style="margin-top: 50px; margin-bottom: 20px; color: #333;">Welcome roll
+    number <%=result[0].fullname %></h2>
+<h2 style="margin-bottom: 20px; color: #333;">Discussions</h2>
+<% for(var i=0;i<qs.length;i++) { %>
+    <p><a href='answers?_id=<%=qs[i]._id %>'
+            style="color: #007bff; text-decoration: none;"
+            target="_blank"><%=qs[i]._id %> : <%=qs[i].question %></a></p>
+    <% } %>
+    <hr>
+    <h2 style="margin-bottom: 20px; color: #333;">Create question</h2>
+    <form action="insert_question" style="margin-bottom: 20px;">
+        Question: <input type="text" name="question" required
+            style="width: calc(100% - 20px); padding: 10px; margin-bottom: 20px; margin-top:20px; border: 1px solid #ccc; border-radius: 3px;">
+        <input type="submit"
+            style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    </form>

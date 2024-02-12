@@ -1,0 +1,11 @@
+npm install mongodb
+// to create directory
+
+mkdir /data/db
+ls /data/db
+
+npm install express
+
+npm install bcrypt
+
+npm install express-validator

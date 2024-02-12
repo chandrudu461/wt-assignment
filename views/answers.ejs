@@ -1,0 +1,18 @@
+Welcome roll number
+<h2 style="margin-top: 50px; margin-bottom: 20px; color: #333;">Discussions</h2>
+
+<% for(var i=0;i<as.length;i++) { %>
+    <p> <%=as[i]._id %> : <%=as[i].answer %></a></p>
+
+<% } %>
+
+<hr>
+<h2 style="margin-bottom: 20px; color: #333;">Add Your Response</h2>
+
+<form action="add_answer">
+    Answer: <input type="text" name="answer" required
+        style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; margin-top:20px">
+    <input type="hidden" name="qid" value="<%=qid %>">
+    <input type="submit"
+        style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+</form>
